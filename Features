@@ -1,0 +1,6 @@
+1. Will calculate table growth in rows and KB per each table and notify administrator of top growers on a user defined schedule.
+2. Will include OLA scripts and create backup jobs with custom name and if possible make jobs optional when deploying database.
+3. Will gather index read/write usage and along with other metadata and statistics into a table.
+   A. To be used to find tables that are never accessed and poorly performing indexes.
+4. Deploys backup policy check
+5. Includes purge definition table and job
