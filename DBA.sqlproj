@@ -58,10 +58,14 @@
     <Folder Include="Properties" />
     <Folder Include="Tables" />
     <Folder Include="Stored Procedures" />
+    <Folder Include="Procedures" />
+    <Folder Include="Post Deploy" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\PurgeTables.sql" />
     <Build Include="Stored Procedures\usp_ReindexDatabase.sql" />
+    <Build Include="Tables\TableSpaceHistory.sql" />
+    <Build Include="Procedures\usp_TableSpaceHistory_Add.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DBA.publish.xml" />
