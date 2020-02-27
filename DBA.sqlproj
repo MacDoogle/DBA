@@ -58,7 +58,7 @@
     <Folder Include="Properties" />
     <Folder Include="Tables" />
     <Folder Include="Stored Procedures" />
-    <Folder Include="Post Deploy" />
+    <Folder Include="Post Deploy Scripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\PurgeTables.sql" />
@@ -70,5 +70,9 @@
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="DBA.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Post Deploy Scripts\Script.PostDeployment.sql" />
+    <None Include="Post Deploy Scripts\Job.ChangeRecordReport.sql" />
   </ItemGroup>
 </Project>
