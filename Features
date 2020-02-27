@@ -4,3 +4,4 @@
    A. To be used to find tables that are never accessed and poorly performing indexes.
 4. Deploys backup policy check
 5. Includes purge definition table and job
+6. A way to determine long running jobs
