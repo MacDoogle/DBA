@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[TableSpaceHistory](
+﻿CREATE TABLE [dbo].[TableSpaceUsed](
 	[AnalysisDate] [datetime] NOT NULL,
 	[TableSchema] [varchar](200) NOT NULL,
 	[TableName] [varchar](200) NOT NULL,
@@ -6,7 +6,7 @@
 	[TotalSpaceKB] [int] NOT NULL,
 	[UsedSpaceKB] [int] NOT NULL,
 	[UnusedSpaceKB] [int] NOT NULL,
- CONSTRAINT [PK_TableSpaceHistory] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_TableSpaceUsed] PRIMARY KEY CLUSTERED 
 (
 	[AnalysisDate] ASC,
 	[TableSchema] ASC,
@@ -15,5 +15,5 @@
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [dbo].[TableSpaceHistory] ADD  CONSTRAINT [DF_TableSpaceHistory_AnalysisDate]  DEFAULT (getdate()) FOR [AnalysisDate]
+ALTER TABLE [dbo].[TableSpaceUsed] ADD  CONSTRAINT [DF_TableSpaceUsed_AnalysisDate]  DEFAULT (getdate()) FOR [AnalysisDate]
 GO

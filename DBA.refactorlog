@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="a2f8200c-d9dd-4bb8-b0e9-3a4af524dabd" ChangeDateTime="02/27/2020 20:04:21">
+    <Property Name="ElementName" Value="[dbo].[TableSpaceHistory]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[dbo]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[TableSpaceUsed]" />
+  </Operation>
+</Operations>

@@ -1,9 +1,9 @@
-﻿CREATE PROCEDURE dbo.usp_TableSpaceHistory_Add @HistoryDaysToKeep INT = 180
+﻿CREATE PROCEDURE dbo.usp_TableSpaceUsed_Add @HistoryDaysToKeep INT = 180
 AS
 BEGIN
     SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
 
-    INSERT dbo.TableSpaceHistory
+    INSERT dbo.[TableSpaceUsed]
     (
         TableSchema,
         TableName,
@@ -36,7 +36,7 @@ BEGIN
     ORDER BY s.name,
              t.name;
 
-    DELETE FROM dbo.TableSpaceHistory
+    DELETE FROM dbo.[TableSpaceUsed]
     WHERE AnalysisDate < GETDATE() - @HistoryDaysToKeep;
 END;
 GO
