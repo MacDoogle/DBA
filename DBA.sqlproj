@@ -63,7 +63,7 @@
   <ItemGroup>
     <Build Include="Tables\PurgeTables.sql" />
     <Build Include="Tables\TableSpaceUsed.sql" />
-    <Build Include="Stored Procedures\usp_TableSpaceHistory_Add.sql" />
+    <Build Include="Stored Procedures\usp_TableSpaceUsed_Add.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DBA.publish.xml" />
