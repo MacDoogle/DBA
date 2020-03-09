@@ -1,5 +1,9 @@
-﻿
-CREATE PROCEDURE [dbo].[usp_TableSpaceUsed_Add] @HistoryDaysToKeep INT = 180
+﻿/* Takes a comma delimented string of databases and runs a query against each one and inserts table sizes into DBA.dbo.TableSpacedUsed */
+
+CREATE PROCEDURE [dbo].[usp_TableSpaceUsed_Add]
+@Dbs VARCHAR(50),
+@HistoryDaysToKeep INT = 180
+
 AS
 BEGIN
     SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
@@ -7,7 +11,7 @@ BEGIN
 	DECLARE @cmd NVARCHAR(4000);
 
     DECLARE Database_Cursor CURSOR FAST_FORWARD FOR
-	SELECT [name] from sys.databases WHERE database_id > 4
+	SELECT [name] from sys.databases WHERE ','+@Dbs+',' LIKE '%,'+CONVERT(VARCHAR(50),[name])+',%';
 	
 	OPEN Database_Cursor
 
