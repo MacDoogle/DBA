@@ -64,6 +64,7 @@
     <Build Include="Tables\PurgeTables.sql" />
     <Build Include="Tables\TableSpaceUsed.sql" />
     <Build Include="Stored Procedures\usp_TableSpaceUsed_Add.sql" />
+    <Build Include="Stored Procedures\usp_CheckLongRunningJobs.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DBA.publish.xml" />
