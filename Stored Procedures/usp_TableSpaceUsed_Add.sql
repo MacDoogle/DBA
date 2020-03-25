@@ -44,7 +44,7 @@ BEGIN
 			ORDER BY s.name,
 					 t.name;'
 	
-	INSERT DBA.dbo.[TableSpaceUsed]
+	INSERT DBA_Tools.dbo.[TableSpaceUsed]
     (
         DatabaseName,
 		TableSchema,

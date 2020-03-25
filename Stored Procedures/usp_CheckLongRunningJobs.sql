@@ -1,12 +1,4 @@
-﻿USE [Inntopia2]
-GO
-
-/****** Object:  StoredProcedure [dbo].[ipDBA_CheckForHangingSQLAgentJobs]    Script Date: 3/17/2020 9:06:29 AM ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
+﻿
 
 CREATE PROCEDURE [dbo].[usp_CheckLongRunningJobs]
 -- exec ipDBA_CheckForHangingSQLAgentJobs
