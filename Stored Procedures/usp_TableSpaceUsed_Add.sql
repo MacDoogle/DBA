@@ -62,7 +62,7 @@ BEGIN
 	CLOSE Database_Cursor
 	DEALLOCATE Database_Cursor
 	
-	DELETE FROM DBA.dbo.[TableSpaceUsed]
+	DELETE FROM DBA_Tools.dbo.[TableSpaceUsed]
     WHERE AnalysisDate < GETDATE() - @HistoryDaysToKeep;
 END;
 GO
