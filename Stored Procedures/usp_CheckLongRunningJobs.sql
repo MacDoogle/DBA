@@ -2,6 +2,7 @@
 
 CREATE PROCEDURE [dbo].[usp_CheckLongRunningJobs]
 -- exec ipDBA_CheckForHangingSQLAgentJobs
+-- Checks to see if any job (besides exclusions) have been running for more then 3 hours.  Sends an email if true.
 AS
 BEGIN
 	DECLARE @jobname VARCHAR(400),
@@ -45,7 +46,7 @@ BEGIN
 	BEGIN
 		DECLARE @msgSubject varchar(100)
 		SET @msgSubject = 'Check Hanging SQL Agent Jobs - ' + @@SERVERNAME
-		EXEC dbo.ipEmailSend_v2 @MailTo = @EmailDBA,
+		EXEC sp_send_dbmail @MailTo = @EmailDBA,
 			@Subject = @msgSubject,
 			@MailFromDisplay = 'DBAs',
 			@MailFrom = @EmailDBA,

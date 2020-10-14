@@ -61,6 +61,7 @@
     <Folder Include="Post Deploy Scripts" />
     <Folder Include="Schemas" />
     <Folder Include="Scripts" />
+    <Folder Include="Jobs" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\PurgeTables.sql" />
@@ -69,16 +70,16 @@
     <Build Include="Stored Procedures\usp_CheckLongRunningJobs.sql" />
     <Build Include="Schemas\ExtendedEvents_Schema.sql" />
     <None Include="Scripts\MaintenanceSolution.sql" />
+    <None Include="Jobs\Job.ChangeRecordReport.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="DBA.refactorlog" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Post Deploy Scripts\Script.PostDeployment.sql" />
-    <None Include="Post Deploy Scripts\Job.ChangeRecordReport.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DBA_Tools.publish.xml" />
-    <None Include="DBA_Tools_Work.publish.xml" />
+    <None Include="DBA_Tools_Inntopia.publish.xml" />
   </ItemGroup>
 </Project>
