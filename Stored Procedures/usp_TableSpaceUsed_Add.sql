@@ -44,7 +44,7 @@ BEGIN
 			ORDER BY s.name,
 					 t.name;'
 	
-	INSERT DBA_Tools.dbo.[TableSpaceUsed]
+	INSERT [TableSpaceUsed]
     (
         DatabaseName,
 		TableSchema,
@@ -62,7 +62,7 @@ BEGIN
 	CLOSE Database_Cursor
 	DEALLOCATE Database_Cursor
 	
-	DELETE FROM DBA_Tools.dbo.[TableSpaceUsed]
+	DELETE FROM dbo.TableSpaceUsed
     WHERE AnalysisDate < GETDATE() - @HistoryDaysToKeep;
 END;
 GO

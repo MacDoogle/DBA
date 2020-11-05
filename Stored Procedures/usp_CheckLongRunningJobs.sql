@@ -46,12 +46,13 @@ BEGIN
 	BEGIN
 		DECLARE @msgSubject varchar(100)
 		SET @msgSubject = 'Check Hanging SQL Agent Jobs - ' + @@SERVERNAME
-		EXEC sp_send_dbmail @MailTo = @EmailDBA,
-			@Subject = @msgSubject,
-			@MailFromDisplay = 'DBAs',
-			@MailFrom = @EmailDBA,
-			@fText = 1,
-			@Message = @message;
+		EXEC msdb.dbo.sp_send_dbmail 
+			@profile_name = 'Default_Profile',
+			@recipients = @EmailDBA,
+			@subject = @msgSubject,
+			@reply_to = 'DBAs',
+			@from_address = @EmailDBA,
+			@body = @message;
 	END;
 END;
 GO
